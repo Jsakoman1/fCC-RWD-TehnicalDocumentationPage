@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta title="HTML Basics">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <nav id="navbar">
+            <header>Python</header>
+            <ul>
+                <li><a class="nav-link" href="#Why_Python">Why Python</a></li>
+                <li><a class="nav-link" href="#Variables">Variables</a></li>
+                <li><a class="nav-link" href="#Strings">Strings</a></li>
+                <li><a class="nav-link" href="#If">If</a></li>
+                <li><a class="nav-link" href="#Else_If">Else If</a></li>
+                <li><a class="nav-link" href="#For">For</a></li>
+                <li><a class="nav-link" href="#While">While</a></li>
+            </ul>
+        </nav>
+
+        <main id="main-doc">
+            <section class="main-section" id="Why_Python">
+                <header>Why Python</header>
+                <article>
+                <p>In this case, we are going to talk about Python. It was created in 1991, by a developer named Guido Van Rossum.</p>
+                <ul>
+                    <li> If it is your first time programming, Python is a great choice. Once you get started, you’ll see that Python is friendly and easy to learn, has a lot of application and is open source.</li>
+                    <li>It has multiple programming paradigms and object-oriented functional programming.</li>
+                    <li>Python is described as an interpreted and dynamic programming language with a focus on code readability. Have fewer steps to coding than Java or C++.</li>
+                </ul>
+
+                   <p>It is designed to stress on code readability by utilizing substantial white space and simplicity as it allows programmers to write models and conceptions in less amounts of code lines compared to other languages like C++ or Java.</p>
+
+                   <p>This makes python a very popular programming language used for desktop stand-alone applications or online/ web applications as well as small or large scales development projects.</p>
+
+                <p>Hello World</p>
+                <code>print('hello world')
+                </code>
+                </article>
+
+            </section>
+            <section class="main-section" id="Variables">
+                <header>Variables</header>
+                <article>
+                <p>Some rules
+                </p>
+                <ul>
+                    <li>Python supports different types of variables (datatypes) such as whole numbers, floating point numbers and text.</li>
+                    <li>You do not need to specify the datatype of a variable, you can simply assign any value to a variable. Type the program below and start it.</li>
+                </ul>
+                <p>The example below shows you several variables. These can be assigned as you wish. Once defined you can print them or use arithmetics.
+                </p>
+                <code>x = 3              # a whole number                   
+                    f = 3.1415926      # a floating point number              
+                    name = "Python"    # a string
+                    
+                    print(x)
+                    print(f)
+                    print(name)
+                    
+                    combination = name + " " + name
+                    print(combination)
+                    
+                    sum = f + f
+                    print(sum)</code>
+                
+            </article>
+            </section>
+            <section class="main-section" id="Strings">
+                <header>Strings</header>
+                <article>
+                <p>Any time you want to use text in Python, you are using strings. Python understands you want to use a string if you use the double-quotes symbol.<br>
+
+                    Once a string is created, you can simply print the string variable directly. You can access characters using block quotes.
+                </p>
+                <p>Define string<br><br>
+
+                    Variables can be of the string data type. They can hold characters or text.<br>
+                    If you create string variable x. You can show it on the screen using the print() function.
+                </p>
+                <code>x = "Hello"
+                    print(x)</code>
+
+                <p>Individual characters can be accessed using blockquotes, counting starts from zero.</p>
+                <code>print(x[0])
+                    print(x[1])</code>
+                <p>By using a colon you can create a substring. If no start or end number is written, Python assumes you mean the first character or last character.</p>
+                <code>x = "hello world"
+                    s = x[0:3]
+                    print(s)
+                    s = x[:3]
+                    print(s)</code>
+
+                    <p>Complete code: </p>
+                    <code>x = "Nancy"
+                        print(x)
+                        
+                        # Combine numbers and text
+                        s = "My lucky number is %d, what is yours?" % 7
+                        print(s)
+                        
+                        # alternative method of combining numbers and text
+                        s = "My lucky number is " + str(7) + ", what is yours?"
+                        print(s)
+                        
+                        # print character by index
+                        print(x[0])
+                        
+                        # print piece of string
+                        print(x[0:3])</code>
+
+
+            </article>
+            </section>
+            <section class="main-section"  id="If">
+                <header>If</header>
+                <article>
+                <p>A program sometimes may have to make choices. These choices can execute different code depending on certain condition.
+                </p>
+                <ul>
+                    <li>In Python the if statement is used for conditional execution or branching. An if statement is one of the control structures. (A control structure controls the flow of the program.)</li>
+                    <li>The if statement may be combined with certain operator such as equality (==), greater than (>=), smaller than (<=) and not equal (!=). Conditions may be combined using the keywords or and and.</li>
+                </ul>
+                <p>Several examples of the if statements are shown below, you can run them in the Python interpreter:
+                </p>
+                <code>>>> x = 3
+                    >>> if x < 10:
+                    ...     print('x below ten')
+                    ... 
+                    x below ten
+                    >>> if x > 10:
+                    ...     print('x is greater than ten')
+                    ... 
+                    >>> if x > 1 and x < 4:
+                    ...     print('x is in range')
+                    ... 
+                    x is in range
+                    >>> </code>
+                    </article>
+            </section>
+                    <section class="main-section"  id="Else_If">
+                        <header>Else If</header>
+                        <article>
+                    <p>You can use if statements to make an interactive program. Copy the program below and run it.
+                        It has several if statements, that are evaluated based on the keyboard input.<br>
+                        
+                        Because keyboard input is used, we use the equality sign (==) for string comparison.
+                        The second string is typed, but we need a number. You can convert the string to an integer using int().<br>
+                        
+                        It also makes use of the else keyword, this is the other evaluation case. When comparing age (age < 5) the else means (>= 5), the opposite.</p>
+                        <code>gender = input("Gender? ")
+                            gender = gender.lower()
+                            if gender == "male":
+                                print("Your cat is male")
+                            elif gender == "female":
+                                print("Your cat is female")
+                            else:
+                                print("Invalid input")
+                            
+                            age = int(input("Age of your cat? "))
+                            if age < 5:
+                                print("Your cat is young.")
+                            else:
+                                print("Your cat is adult.")
+                            </code>
+
+            </article>
+            </section>
+            <section class="main-section"  id="For">
+                <header>For</header>
+                <article>
+                <p>Programs sometimes need to repeat actions. To repeat actions we can use a for loop.</p>
+                <ul>
+                    <li>A for loop is written inside the code. A for loop can have 1 or more instructions.</li>
+                    <li>A for loop will repeat a code block. Repeation is continued until the stop condition is met. If the stop condition is not met it will loop infintely.</li>
+                    <li>A for loop will repeat a code block. Repeation is continued until the stop condition is met. If the stop condition is not met it will loop infintely.</li>
+                    <li>These instructions (loop) is repeated until a condition is met.</li>
+                </ul>
+                    
+                <p>Example</p>
+                <code>city = ['Tokyo','New York','Toronto','Hong Kong']
+                    print('Cities loop:')
+                    for x in city:
+                        print('City: ' + x)
+                    
+                    print('\n')  # newline
+                    
+                    num = [1,2,3,4,5,6,7,8,9]
+                    print('x^2 loop:')
+                    for x in num:
+                        y = x * x
+                        print(str(x) + '*' + str(x) + '=' + str(y))</code>
+                
+            </article>
+            </section>
+
+            <section class="main-section"  id="While">
+                <header>While</header>
+                <article>
+                <p>A while loop repeats code until the condition is met. Unlike for loops, the number of iterations in it may be unknown.</p>
+                <ul>
+                    <li>A while loop always consists of a condition and a block of code.</li>
+                    <li>A while loop ends if and only if the condition is true, in contrast to a for loop that always has a finite countable number of steps.</li>
+                </ul>
+                    
+                <p>Example</p>
+                <code>x = 3                              
+                    while x < 10:
+                        print(x)
+                        x = x + 1</code>
+                
+            </article>
+            </section>
+
+        </main>
+    </body>
+</html>
